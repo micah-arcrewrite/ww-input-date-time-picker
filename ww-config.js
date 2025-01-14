@@ -1,7 +1,7 @@
 export default {
   editor: {
     label: {
-      en: "Date picker",
+      en: "StackPack Date Picker",
     },
     icon: "calendar",
     bubble: {
@@ -200,6 +200,8 @@ export default {
       type: "Title",
       section: "style",
       editorOnly: true,
+      bindable: true,
+
     },
     stylesTitle: {
       label: {
@@ -209,6 +211,8 @@ export default {
       type: "Title",
       section: "style",
       editorOnly: true,
+      bindable: true,
+
     },
     colorsTitle: {
       label: {
@@ -218,6 +222,8 @@ export default {
       type: "Title",
       section: "style",
       editorOnly: true,
+      bindable: true,
+
     },
     selectionTitle: {
       label: {
@@ -226,6 +232,8 @@ export default {
       type: "Title",
       section: "settings",
       editorOnly: true,
+      bindable: true,
+
     },
     behaviorTitle: {
       label: {
@@ -234,6 +242,8 @@ export default {
       type: "Title",
       section: "settings",
       editorOnly: true,
+      bindable: true,
+
     },
     timeTitle: {
       label: {
@@ -242,6 +252,8 @@ export default {
       type: "Title",
       section: "settings",
       editorOnly: true,
+      bindable: true,
+
     },
     datesTitle: {
       label: {
@@ -250,6 +262,8 @@ export default {
       type: "Title",
       section: "settings",
       editorOnly: true,
+      bindable: true,
+
     },
     weeksAndMonthsTitle: {
       label: {
@@ -258,6 +272,7 @@ export default {
       type: "Title",
       section: "settings",
       editorOnly: true,
+      bindable: true,
     },
     flowTitle: {
       label: {
@@ -266,11 +281,14 @@ export default {
       type: "Title",
       section: "settings",
       editorOnly: true,
+      bindable: true,
+
     },
     advancedColors: {
       label: { en: "Advanced" },
       section: "style",
       defaultValue: false,
+      bindable: true,
       type: "TextRadioGroup",
       options: {
         choices: [
@@ -284,6 +302,7 @@ export default {
       section: "style",
       defaultValue: false,
       type: "TextRadioGroup",
+      bindable: true,
       options: {
         choices: [
           { value: true, label: { en: "Show" } },
@@ -295,6 +314,7 @@ export default {
       label: { en: "Advanced" },
       section: "settings",
       defaultValue: false,
+      bindable: true,
       type: "TextRadioGroup",
       options: {
         choices: [
@@ -308,6 +328,7 @@ export default {
       type: "OnOff",
       defaultValue: false,
       states: true,
+      bindable: true,
       classes: true,
     },
     stickedDatePicker: {
@@ -325,6 +346,7 @@ export default {
       label: { en: "Fit" },
       section: "style",
       defaultValue: "stretch",
+      bindable: true,
       type: "TextRadioGroup",
       options: {
         choices: [
@@ -340,12 +362,14 @@ export default {
       label: { en: "Left sidebar" },
       type: "OnOff",
       defaultValue: false,
+      bindable: true,
       hidden: (content) => content.enableCalendarOnly,
     },
     enableRightSidebar: {
       label: { en: "Right sidebar" },
       type: "OnOff",
       defaultValue: false,
+      bindable: true,
       hidden: (content) => content.enableCalendarOnly,
     },
     menuPosition: {
@@ -363,6 +387,7 @@ export default {
       },
       states: true,
       classes: true,
+      bindable: true,
       responsive: true,
       defaultValue: "center",
     },
@@ -373,6 +398,7 @@ export default {
       },
       type: "TextSelect",
       section: "settings",
+      bindable: true,
       options: {
         options: [
           { value: "single", label: { en: "Single" } },
@@ -389,6 +415,7 @@ export default {
       },
       type: "TextSelect",
       section: "settings",
+      bindable: true,
       options: (content) => {
         return {
           options: [
@@ -426,6 +453,7 @@ export default {
       label: { en: "Enable seconds", fr: "Activer les secondes" },
       type: "OnOff",
       section: "settings",
+      bindable: true,
       defaultValue: false,
       hidden: (content) => !["datetime", "time"].includes(content.dateMode),
     },
@@ -436,6 +464,7 @@ export default {
       defaultValue: false,
       states: true,
       classes: true,
+      bindable: true,
       responsive: true,
       hidden: (content) => !["datetime", "time"].includes(content.dateMode),
     },
@@ -445,6 +474,7 @@ export default {
       },
       type: "Number",
       section: "settings",
+      bindable: true,
       defaultValue: 0,
       hidden: (content) => content.selectionMode !== "multi",
     },
@@ -452,6 +482,7 @@ export default {
       label: { en: "Multi calendars", fr: "Calendriers multiple" },
       type: "OnOff",
       section: "style",
+      bindable: true,
       defaultValue: false,
       hidden: (content) =>
         content.selectionMode !== "range" ||
@@ -464,6 +495,7 @@ export default {
       type: "Number",
       section: "style",
       defaultValue: 2,
+      bindable: true,
       options: {
         min: 2,
         max: 4,
@@ -478,6 +510,7 @@ export default {
       label: { en: "Independant calendars", fr: "Calendriers indépendants" },
       type: "OnOff",
       section: "style",
+      bindable: true,
       defaultValue: false,
       hidden: (content) =>
         content.selectionMode !== "range" ||
@@ -624,6 +657,7 @@ export default {
       },
       section: "settings",
       editorOnly: true,
+      bindable: true,
       hidden: (content) => !content.enableFlow,
     },
     flowSteps: {
@@ -633,6 +667,7 @@ export default {
       },
       type: "Array",
       section: "settings",
+      bindable: true,
       options: {
         item: {
           type: "Text",
@@ -940,6 +975,7 @@ export default {
       },
       responsive: true,
       states: true,
+      bindable: true,
       classes: true,
     },
     themeFontSize: generateThemeSizingConfig("Font size", 16, 48),
