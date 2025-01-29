@@ -1220,7 +1220,7 @@ const Hl = (e, n, a, t) => {
   }, I = (P) => {
     o.value.left = `${P}px`, o.value.transform = "translateX(0)";
   }, L = (P, y, S = !1) => {
-    t.position === It.left && I(P), t.position === It.right && O(P, y), t.position === It.center && (o.value.left = `${P + y / 2}px`, o.value.transform = window.screen.width <= 768 ? '' : (S ? "translate(-50%)" : "translateX(-50%)"));
+    t.position === It.left && I(P), t.position === It.right && O(P, y), t.position === It.center && (o.value.left = `${P + y / 2}px`, o.value.transform = window.screen.width <= 768 ? '' : (S ? "translate(-50%, -50%)" : "translateX(-50%)"));
   }, A = (P) => {
     const { width: y, height: S } = P.getBoundingClientRect(), { top: b, left: U } = t.altPosition ? t.altPosition(P) : D(P);
     return { top: +b, left: +U, width: y, height: S };
